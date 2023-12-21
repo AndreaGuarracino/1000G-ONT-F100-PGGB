@@ -196,3 +196,5 @@ HG04054	hap1	https://s3.amazonaws.com/1000g-ont/FIRST_100_FREEZE/CARD_assembly_p
 HG04054	hap2	https://s3.amazonaws.com/1000g-ont/FIRST_100_FREEZE/CARD_assembly_pipeline_data/HG04054/HG04054.LSK110.R9_hapdup_dual_2.fasta
 HG04063	hap1	https://s3.amazonaws.com/1000g-ont/FIRST_100_FREEZE/CARD_assembly_pipeline_data/HG04063/HG04063.LSK110.R9_hapdup_dual_1.fasta
 HG04063	hap2	https://s3.amazonaws.com/1000g-ont/FIRST_100_FREEZE/CARD_assembly_pipeline_data/HG04063/HG04063.LSK110.R9_hapdup_dual_2.fasta
+HG04216	hap1	https://s3.amazonaws.com/1000g-ont/FIRST_100_FREEZE/CARD_assembly_pipeline_data/HG04216/HG04216.LSK110.R9_hapdup_dual_1.fasta
+HG04216	hap2	https://s3.amazonaws.com/1000g-ont/FIRST_100_FREEZE/CARD_assembly_pipeline_data/HG04216/HG04216.LSK110.R9_hapdup_dual_2.fasta
