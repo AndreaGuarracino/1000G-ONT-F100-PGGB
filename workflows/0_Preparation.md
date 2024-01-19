@@ -58,7 +58,7 @@ ls $DIR_BASE/assemblies/F100/*fa.gz | while read FASTA; do
 done
 ```
 
-Check the ength threshold to apply:
+Check the length threshold to apply without losing too much sequence:
 
 ```shell
 # We just want the chromosome information, not the specific reference
@@ -95,7 +95,7 @@ Partition by chromosome, filtering by length:
     if [[ "$CHR" == "chrM" ]]; then
         NAME_CHR_FASTA="1000G-ONT.100x2+4.$CHR.fa"
     else
-        NAME_CHR_FASTA="1000G-ONT.100x2+4.$CHR.30bkp.fa"
+        NAME_CHR_FASTA="1000G-ONT.100x2+4.$CHR.30kbp.fa"
     fi
 
     # Add references
