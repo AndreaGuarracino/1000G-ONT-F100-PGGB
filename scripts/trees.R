@@ -8,6 +8,9 @@ library(ggrepel)
 path_dist_tsv <- '/home/guarracino/Desktop/Garrison/1000G-ONT-F100-PGGB/1000G-30kbp+HPRC.chr6.MHC.haplotype.dist.tsv'
 plot_title <- '"1000G-ONT + HPRC" MHC pangenome'
 
+path_dist_tsv <- '/home/guarracino/Desktop/Garrison/1000G-ONT-F100-PGGB/1000G-30kbp+HPRC.chr20.haplotype.dist.tsv'
+plot_title <- '"1000G-ONT + HPRC" chr20 pangenome'
+
 # Read matrices
 meta_df <- read.table("/home/guarracino/git/1000G-ONT-F100-PGGB/data/metadata.tsv", header = F)
 colnames(meta_df) <- c('Sample', 'Group')
@@ -39,7 +42,7 @@ fit_and_meta_df$Label[fit_and_meta_df$Group != 'REFERENCE'] <- ''
 
 plotD1D2 <- ggplot(
   data = fit_and_meta_df,
-  aes(x = V1, y = V2, label = Name, shape = Group, color = Group)
+  aes(x = V1, y = V2, label = Label, shape = Group, color = Group)
 ) +
   #scale_color_manual(values=haplotype_colors) +
   geom_point(size=2, alpha=0.7) + 
@@ -56,10 +59,11 @@ plotD1D2 <- plotD1D2 +
     max.iter=1000,
     max.time=2,
     show.legend=FALSE, # to hide the `a` from the legend
-    max.overlaps=30#Inf
+    max.overlaps=10#Inf
   )
 #plotD1D2
 ggsave("1000G-ONT+HPRC.chr6.MHC.PCA.png", plotD1D2, width = 10, height = 6, dpi = 300)
+ggsave("1000G-ONT+HPRC.chr20.PCA.png", plotD1D2, width = 10, height = 6, dpi = 300)
 
 plotD1D2 <- ggplot(
   data = fit_and_meta_df,
