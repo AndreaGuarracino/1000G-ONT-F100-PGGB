@@ -16,7 +16,7 @@ Run `pggb`:
 mkdir -p $DIR_BASE/graphs
 cd $DIR_BASE/graphs
 
-ls $DIR_BASE/partitions/1000G-ONT.100x2+4.chr*.fa.gz | grep 30kbp -v | grep chr9 | while read FASTA; do
+ls $DIR_BASE/partitions/1000G-ONT.100x2+4.chr*.fa.gz | grep 30kbp | grep chr9 | while read FASTA; do
     NAME=$(basename $FASTA .fa.gz)
 
     if echo "$FASTA" | grep -q "chrM"; then
@@ -37,7 +37,7 @@ ls $DIR_BASE/partitions/1000G-ONT.100x2+4.chr*.fa.gz | grep 30kbp -v | grep chr9
     elif echo "$FASTA" | grep -q 'chr9\.'; then
         s=20k
         THREADS=96
-        POA_THREADS=80
+        POA_THREADS=64
         GROUP=tux
         SEQWISH_K="-k 47"
     else
