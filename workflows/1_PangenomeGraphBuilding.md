@@ -5,7 +5,7 @@ Variables:
 ```shell
 DIR_BASE=/lizardfs/guarracino/1000G-ONT-F100-PGGB
 
-PGGB=/home/guarracino/tools/pggb/pggb-8131f28c3085a241b88a4a4de2ae3b64c2ddaaf0
+PGGB=/home/guarracino/tools/pggb/pggb-0317e7f8e20bed2c2c9766fc0227310353889e92
 ODGI=/home/guarracino/tools/odgi/bin/odgi-861b1c04f5622c5bb916a161c1abe812c213f1a5
 WFMASH=/home/guarracino/tools/wfmash/build/bin/wfmash-0b191bb84ffdfd257354c1aa82a7f1e13dc536d0
 ```
@@ -56,19 +56,19 @@ Call variants:
 ```shell
 cd $DIR_BASE/graphs
 
-ls $DIR_BASE/partitions/1000G-ONT.100x2+4.chr*.fa.gz | grep 30kbp | grep 'chr9\.' -v | while read FASTA; do
+ls $DIR_BASE/partitions/1000G-ONT.100x2+4.chr*.fa.gz | grep 30kbp | grep 'chr9\.' | while read FASTA; do
     NAME=$(basename $FASTA .fa.gz)
 
     if echo "$FASTA" | grep -q "chrM"; then
-        s=5k
-        p=98
-        REFS=hg002:10000,chm13:10000
+        s=500
+        p=90
         DIR_OUTPUT=$DIR_BASE/graphs/$NAME.p$p.s$s
+        REFS=hg002:10000,chm13:10000
     else
         s=10k
         p=98
-        REFS=grch38:10000,chm13:10000
         DIR_OUTPUT=$DIR_BASE/graphs/$NAME
+        REFS=grch38:10000,chm13:10000
     fi
 
     if echo "$FASTA" | grep -q 'chr1\.'; then
@@ -80,24 +80,8 @@ ls $DIR_BASE/partitions/1000G-ONT.100x2+4.chr*.fa.gz | grep 30kbp | grep 'chr9\.
         SEQWISH_K=""
     fi
 
-    sbatch -c 48 -p allnodes -x octopus03,octopus05 --job-name vg-deconstruct-$NAME --wrap "hostname; alias vcfwave=/home/guarracino/tools/vcflib/build/vcfwave-7c1a31a430d339adcb9a0c2fd3fd02d3b30e3549; $PGGB -i $FASTA -o $DIR_OUTPUT -s $s -p $p -D /scratch -t 48 -T 48 $SEQWISH_K -V $REFS --resume"
+    sbatch -c 96 -p tux -x octopus03,octopus05 --job-name vg-deconstruct-$NAME --wrap "hostname; alias vcfwave=/home/guarracino/tools/vcflib/build/vcfwave-7c1a31a430d339adcb9a0c2fd3fd02d3b30e3549; $PGGB -i $FASTA -o $DIR_OUTPUT -s $s -p $p -D /scratch -t 96 -T 48 $SEQWISH_K -V $REFS --resume"
 done
-
-[E::hts_idx_push] Unsorted positions on sequence #1: 129010143 followed by 129005381
-tbx_index_build failed: 1000G-ONT.100x2+4.chr1.30kbp/1000G-ONT.100x2+4.chr1.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.chm13.decomposed.vcf.gz
-[E::hts_idx_push] Unsorted positions on sequence #1: 9382592 followed by 9376254
-tbx_index_build failed: 1000G-ONT.100x2+4.chr14.30kbp/1000G-ONT.100x2+4.chr14.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.chm13.decomposed.vcf.gz
-[E::hts_idx_push] Unsorted positions on sequence #1: 15231894 followed by 15231260
-tbx_index_build failed: 1000G-ONT.100x2+4.chr16.30kbp/1000G-ONT.100x2+4.chr16.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.grch38.decomposed.vcf.gz
-[E::hts_idx_push] Unsorted positions on sequence #1: 15236720 followed by 15236094
-tbx_index_build failed: 1000G-ONT.100x2+4.chr16.30kbp/1000G-ONT.100x2+4.chr16.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.chm13.decomposed.vcf.gz
-[E::hts_idx_push] Unsorted positions on sequence #1: 110534 followed by 104822
-tbx_index_build failed: 1000G-ONT.100x2+4.chr1.30kbp/1000G-ONT.100x2+4.chr1.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.grch38.decomposed.vcf.gz
-
-for VCF in 1000G-ONT.100x2+4.chr14.30kbp/1000G-ONT.100x2+4.chr14.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.chm13.decomposed.vcf.gz 1000G-ONT.100x2+4.chr16.30kbp/1000G-ONT.100x2+4.chr16.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.grch38.decomposed.vcf.gz 1000G-ONT.100x2+4.chr16.30kbp/1000G-ONT.100x2+4.chr16.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.chm13.decomposed.vcf.gz 1000G-ONT.100x2+4.chr1.30kbp/1000G-ONT.100x2+4.chr1.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.grch38.decomposed.vcf.gz; do
-
-done
-zcat 1000G-ONT.100x2+4.chr1.30kbp/1000G-ONT.100x2+4.chr1.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.chm13.decomposed.vcf.gz | bcftools sort -T /scratch/chr1.chm13.decomposed.sort.tmp | bgzip -@ 48 -l 9 > /scratch/1000G-ONT.100x2+4.chr1.30kbp.fa.gz.a8a102b.eb0f3d3.b691e61.smooth.final.chm13.decomposed.vcf.gz
 ```
 
 Compressed visualizations:
