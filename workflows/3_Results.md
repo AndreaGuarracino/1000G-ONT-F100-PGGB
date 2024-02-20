@@ -1,6 +1,10 @@
 
 # A few results
 
+## Pangenome graphs
+
+PGGB graphs: [URLs](../data/1000G-ONT-F100-PGGB.gfa.urls.tsv)
+
 ## Assembly-based variants
 
 Decomposed VCF files, with variant called w.r.t. GRCh38 and CHM13: [URLs](../data/1000G-ONT-F100-PGGB.vcf.urls.tsv)

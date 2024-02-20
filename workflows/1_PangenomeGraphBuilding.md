@@ -102,3 +102,7 @@ ls $DIR_BASE/graphs/*/*.og | sort -V | grep 30kbp | while read GRAPH; do
     $ODGI viz -i $GRAPH -o $GRAPH.viz_uncalled_multiqc.merged.png -M $GRAPH.prefixes.txt -x 1500 -y 500 -N"
 done
 ```
+
+```shell
+ls 1000G-ONT.100x2+4.*.30kbp/*gfa.zst | while read f; do NAME=$(basename $f); aws s3 cp $f s3://garrisonlab/1000G-ONT-F100-PGGB/$NAME; done
+```
