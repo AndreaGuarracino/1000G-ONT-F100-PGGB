@@ -1,0 +1,101 @@
+Sample Name	Sex	Population code	Population name	Superpopulation code	Superpopulation name
+GM18501	male	YRI	Yoruba	AFR	African Ancestry
+GM18519	male	YRI	Yoruba	AFR	African Ancestry
+GM18856	male	YRI	Yoruba	AFR	African Ancestry
+GM18861	female	YRI	Yoruba	AFR	African Ancestry
+GM18864	female	YRI	Yoruba	AFR	African Ancestry
+GM18865	male	YRI	Yoruba	AFR	African Ancestry
+GM18871	male	YRI	Yoruba	AFR	African Ancestry
+GM18876	female	YRI	Yoruba	AFR	African Ancestry
+GM18924	female	YRI	Yoruba	AFR	African Ancestry
+GM19035	male	LWK	Luhya	AFR	African Ancestry
+GM19041	male	LWK	Luhya	AFR	African Ancestry
+GM19308	male	LWK	Luhya	AFR	African Ancestry
+GM19312	male	LWK	Luhya	AFR	African Ancestry
+GM19462	female	LWK	Luhya	AFR	African Ancestry
+GM19471	female	LWK	Luhya	AFR	African Ancestry
+GM19473	female	LWK	Luhya	AFR	African Ancestry
+HG00105	male	GBR	British	EUR	European Ancestry
+HG00110	female	GBR	British	EUR	European Ancestry
+HG00121	female	GBR	British	EUR	European Ancestry
+HG00127	female	GBR	British	EUR	European Ancestry
+HG00136	male	GBR	British	EUR	European Ancestry
+HG00151	male	GBR	British	EUR	European Ancestry
+HG00331	female	FIN	Finnish	EUR	European Ancestry
+HG00410	female	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00473	female	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00525	female	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00599	female	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00631	male	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00675	female	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00705	female	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00706	male	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG00728	male	CHS	Southern Han Chinese	EAS	East Asian Ancestry
+HG01046	female	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG01122	female	CLM	Colombian	AMR	American Ancestry
+HG01281	female	CLM	Colombian	AMR	American Ancestry
+HG01312	female	PUR	Puerto Rican	AMR	American Ancestry
+HG01363	female	CLM	Colombian	AMR	American Ancestry
+HG01369	female	CLM	Colombian	AMR	American Ancestry
+HG01372	female	CLM	Colombian	AMR	American Ancestry
+HG01395	male	PUR	Puerto Rican	AMR	American Ancestry
+HG01414	female	PUR	Puerto Rican	AMR	American Ancestry
+HG01468	female	CLM	Colombian	AMR	American Ancestry
+HG01501	female	IBS	Iberian	EUR	European Ancestry
+HG01615	male	IBS	Iberian	EUR	European Ancestry
+HG01695	female	IBS	Iberian	EUR	European Ancestry
+HG01790	female	GBR	British	EUR	European Ancestry
+HG01797	female	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG01801	female	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG01812	female	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG01862	female	KHV	Kinh Vietnamese	EAS	East Asian Ancestry
+HG02048	female	KHV	Kinh Vietnamese	EAS	East Asian Ancestry
+HG02051	male	ACB	African Caribbean	AFR	African Ancestry
+HG02102	female	PEL	Peruvian	AMR	American Ancestry
+HG02185	female	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG02252	female	PEL	Peruvian	AMR	American Ancestry
+HG02262	male	PEL	Peruvian	AMR	American Ancestry
+HG02282	female	ACB	African Caribbean	AFR	African Ancestry
+HG02312	female	PEL	Peruvian	AMR	American Ancestry
+HG02345	female	PEL	Peruvian	AMR	American Ancestry
+HG02373	male	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG02389	male	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG02396	male	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG02409	male	CDX	Dai Chinese	EAS	East Asian Ancestry
+HG02502	female	ACB	African Caribbean	AFR	African Ancestry
+HG02614	female	GWD	Gambian Mandinka	AFR	African Ancestry
+HG02615	female	GWD	Gambian Mandinka	AFR	African Ancestry
+HG02694	female	PJL	Punjabi	SAS	South Asian Ancestry
+HG02731	female	PJL	Punjabi	SAS	South Asian Ancestry
+HG02817	female	GWD	Gambian Mandinka	AFR	African Ancestry
+HG02974	female	ESN	Esan	AFR	African Ancestry
+HG02979	female	ESN	Esan	AFR	African Ancestry
+HG03022	female	PJL	Punjabi	SAS	South Asian Ancestry
+HG03069	male	MSL	Mende	AFR	African Ancestry
+HG03120	male	ESN	Esan	AFR	African Ancestry
+HG03121	female	ESN	Esan	AFR	African Ancestry
+HG03168	female	ESN	Esan	AFR	African Ancestry
+HG03279	female	ESN	Esan	AFR	African Ancestry
+HG03499	female	ESN	Esan	AFR	African Ancestry
+HG03548	female	MSL	Mende	AFR	African Ancestry
+HG03563	female	MSL	Mende	AFR	African Ancestry
+HG03571	male	MSL	Mende	AFR	African Ancestry
+HG03631	female	PJL	Punjabi	SAS	South Asian Ancestry
+HG03643	female	STU	Tamil	SAS	South Asian Ancestry
+HG03646	male	STU	Tamil	SAS	South Asian Ancestry
+HG03668	female	PJL	Punjabi	SAS	South Asian Ancestry
+HG03717	female	ITU	Telugu	SAS	South Asian Ancestry
+HG03731	female	ITU	Telugu	SAS	South Asian Ancestry
+HG03744	male	STU	Tamil	SAS	South Asian Ancestry
+HG03770	female	ITU	Telugu	SAS	South Asian Ancestry
+HG03774	female	ITU	Telugu	SAS	South Asian Ancestry
+HG03814	female	BEB	Bengali	SAS	South Asian Ancestry
+HG03861	female	ITU	Telugu	SAS	South Asian Ancestry
+HG03864	male	ITU	Telugu	SAS	South Asian Ancestry
+HG03868	female	ITU	Telugu	SAS	South Asian Ancestry
+HG03898	female	STU	Tamil	SAS	South Asian Ancestry
+HG03919	female	BEB	Bengali	SAS	South Asian Ancestry
+HG03971	male	ITU	Telugu	SAS	South Asian Ancestry
+HG04054	female	ITU	Telugu	SAS	South Asian Ancestry
+HG04063	female	ITU	Telugu	SAS	South Asian Ancestry
+HG04216	female	ITU	Telugu	SAS	South Asian Ancestry
